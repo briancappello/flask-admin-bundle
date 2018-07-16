@@ -7,7 +7,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='Flask Admin Bundle',
-    version='0.1.1',
+    version='0.2.0',
     description='Integrates Flask Admin with Flask Unchained',
     long_description=long_description,
     url='https://github.com/briancappello/flask-admin-bundle',

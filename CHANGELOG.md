@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## 0.1.1 (unreleased)
+## 0.2.0 (2018/07/16)
 
 * remove unused `flask_admin_bundle` cli command group
+* require flask-unchained >= 0.3.1
 
 ## 0.1.0
 

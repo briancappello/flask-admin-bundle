@@ -26,9 +26,8 @@ setup(
     packages=find_packages(exclude=['docs', 'tests']),
     install_requires=[
         'flask-admin>=1.5.0',
-        'flask-controller-bundle>=0.2.1',
-        'flask-sqlalchemy-bundle>=0.2.1',
-        'flask-unchained>=0.2.2',
+        'flask-sqlalchemy-bundle>=0.3.1',
+        'flask-unchained>=0.3.1',
     ],
     extras_require={
         'dev': [

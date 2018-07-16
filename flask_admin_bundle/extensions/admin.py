@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_admin import Admin as BaseAdmin, helpers
-from flask_controller_bundle import url_for
+from flask_unchained import url_for
 
 
 class Admin(BaseAdmin):

@@ -6,7 +6,7 @@ try:
 except ImportError:
     user = None
 
-from flask_controller_bundle import redirect, url_for
+from flask_unchained import redirect, url_for
 
 
 class AdminSecurityMixin:

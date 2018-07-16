@@ -1,4 +1,4 @@
-from flask_controller_bundle import controller, rule
+from flask_unchained import controller, rule
 
 from .views import AdminSecurityController
 

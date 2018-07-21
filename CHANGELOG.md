@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.3 (2018/07/20)
+
+* fix admin internal blueprints registration with babel
+
 ## 0.2.2 (2018/07/20)
 
 * fix login form to correctly display errors

@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.2.2 (unreleased)
+## 0.2.2 (2018/07/20)
 
 * fix login form to correctly display errors
 

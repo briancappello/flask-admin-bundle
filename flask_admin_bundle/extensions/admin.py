@@ -5,13 +5,21 @@ from flask_unchained import url_for
 
 class Admin(BaseAdmin):
     def init_app(self, app: Flask):
+        self.app = app
         self.name = app.config.get('ADMIN_NAME')
         self.subdomain = app.config.get('ADMIN_SUBDOMAIN')
         self._set_admin_index_view(app.config.get('ADMIN_INDEX_VIEW'),
                                    url=app.config.get('ADMIN_BASE_URL'))
         self.base_template = app.config.get('ADMIN_BASE_TEMPLATE')
         self.template_mode = app.config.get('ADMIN_TEMPLATE_MODE')
-        super().init_app(app)
+
+        self._init_extension()
+
+        # Register views
+        for view in self._views:
+            app.register_blueprint(view.create_blueprint(self),
+                                   register_with_babel=False)
+
         app.context_processor(lambda: dict(admin_base_template=self.base_template,
                                            admin_view=self.index_view,
                                            h=helpers,

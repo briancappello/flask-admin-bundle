@@ -2,9 +2,9 @@
   <div class="form-group">
     {{ field.label }} {{ field(class_='form-control', **kwargs)|safe }}
     {% if field.errors %}
-      <ul>
+      <ul class="errors">
         {% for error in field.errors %}
-          <li>{{ error }}</li>
+          <li class="error">{{ error }}</li>
         {% endfor %}
       </ul>
     {% endif %}
@@ -24,3 +24,14 @@
     </div>
   </div>
 {%- endmacro %}
+
+{% macro form_errors(form) %}
+  {% set errors = form.errors.get('_error', []) %}
+  {% if errors %}
+    <ul class="errors">
+    {% for error in errors %}
+      <li class="error">{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

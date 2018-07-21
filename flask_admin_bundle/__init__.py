@@ -17,7 +17,7 @@ from .extensions import Admin
 from .model_admin import ModelAdmin
 from .macro import macro
 from .security import AdminSecurityMixin
-from .views import AdminDashboardView
+from .views import AdminDashboardView, AdminSecurityController
 
 
 class FlaskAdminBundle(Bundle):
